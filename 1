@@ -1,1 +1,24 @@
-
+// 1.Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare. 
+Console.WriteLine("Rezolvarea ecuatiei de gradul 1 cu o necunoscuta: ax + b = 0");
+Console.WriteLine("Introduceti valorile lui a si b: ");
+string aTxt = Console.ReadLine();
+string bTxt = Console.ReadLine();
+Console.WriteLine("Rezolvarea ecuatiei este: ");
+// Presupunem ca a si b sunt numere intregi
+int a = int.Parse(aTxt);
+int b = int.Parse(bTxt);
+if (a == 0)
+{ 
+    if(b == 0)
+    {
+        Console.WriteLine("Ecuatia are infinit de solutii");
+    }
+    else
+    {
+        Console.WriteLine("Ecuatia nu are solutii");
+    }
+}
+else
+{
+    Console.Write($"x = {-b  / a}");
+}
