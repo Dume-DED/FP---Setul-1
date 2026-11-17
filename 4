@@ -1,0 +1,11 @@
+// Detreminati daca un an y este an bisect
+string anTxt = Console.ReadLine();
+int an = int.Parse(anTxt);
+if ( (an % 4 ==0 && an % 100 != 0) || an % 400 == 0)
+{
+    Console.WriteLine("Da");
+}
+else
+{
+    Console.WriteLine("Nu");
+}
