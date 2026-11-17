@@ -1,0 +1,48 @@
+// Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare. Tratati toate cazurile posibile
+Console.WriteLine("Rezolvarea ecuatiei de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0");
+Console.WriteLine("Introduceti valorile lui a, b, c: ");
+string aTxt = Console.ReadLine();
+string bTxt = Console.ReadLine();
+string cTxt = Console.ReadLine();
+// Presupunem ca a, b, c sunt numere intregi
+int a = int.Parse(aTxt);
+int b = int.Parse(bTxt);
+int c = int.Parse(cTxt);
+if (a == 0)
+    if (b == 0)
+    {
+        if (c == 0)
+        {
+            Console.WriteLine("Ecuatia are un numar infinit de solutii");
+        }
+        else
+        {
+            Console.WriteLine("Ecuatia nu are solutii");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Ecuatia e de forma bx + c = 0 ,unde solutia este :");
+        Console.Write($"x= {-c / b}");
+    }
+
+else
+{
+    float delta = b * b - 4 * a * c;
+    Console.WriteLine($"Delta = {delta}");
+    if (delta < 0)
+    {
+        Console.WriteLine("Ecuatia nu are solutii reale");
+    }
+    else if (delta == 0)
+    {
+        Console.WriteLine($"Ecuatia are o singura solutie: ");
+        Console.Write($"x = {-b / (2 * a)}");
+    }
+    else
+    {
+        Console.WriteLine($"Ecuatia are doua solutii: ");
+        Console.WriteLine($"x1 = {(-b + Math.Sqrt(delta)) / (2 * a)}");
+        Console.WriteLine($"x2 = {(-b - Math.Sqrt(delta)) / (2 * a)}");
+    }
+}   
